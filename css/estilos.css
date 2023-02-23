@@ -1,0 +1,296 @@
+/* RESET DE MARGENES */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* FIN DE RESET DE MARGENES */
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #000000;
+}
+
+article,
+div,
+section,
+fieldset {
+    color: whitesmoke;
+}
+
+/* #logo{
+    height: 20px;
+    width: 50px;
+} */
+
+/* CONFIGURACION TITULOS Y SUBTITULOS */
+#title {
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    background-image: url(../images/Gotham\ City\ Edit.jpg);
+    background-position: center;
+    height: 110px;
+}
+
+h2 {
+    color: whitesmoke;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+h3 {
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* FIN CONFIGURACION TITULOS Y SUBTITULOS */
+
+
+/* DISTRIBUCION PERSONAJES */
+.name {
+    grid-area: name;
+    text-decoration: underline gray;
+
+}
+
+.story {
+    grid-area: story;
+    background-color: rgb(17, 17, 107);
+    width: 50vw;
+    height: 250px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.photo {
+    grid-area: photo;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.character_container {
+    display: grid;
+    width: 100vw;
+    margin-bottom: 100vh;
+    height: 300px;
+    grid-template-areas:
+        "name name"
+        "story photo"
+        "story photo"
+}
+
+.character_container2 {
+    display: grid;
+    width: 100vw;
+    margin-bottom: 100vh;
+    height: 300px;
+    grid-template-areas:
+        "name name"
+        "photo story"
+        "photo story"
+}
+
+/* FIN DISTRIBUCION PERSONAJES */
+
+
+/*CENTRADO DE NAVEGADOR*/
+
+.nav-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 18vw;
+    text-align: center;
+    font-size: 1.4rem;
+    margin: 10px;
+}
+
+/* FIN CENTRADO DE NAVEGADOR */
+
+
+#bienvenida {
+    text-align: center;
+}
+
+.container_section {
+    display: flex;
+    /*     align-items: center; */
+    justify-content: center;
+    text-align: justify;
+    margin: 60px;
+}
+
+.container_section2 {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    text-align: justify;
+    margin: 60px;
+}
+
+article p {
+    margin: 30px;
+}
+
+
+/* CAROUSEL */
+
+.gadget {
+    /* SUBRAYADO DE TITULOS DE LAS HERRAMIENTAS */
+    text-decoration: underline gray;
+}
+
+.carousel_container {
+    display: grid;
+    height: 600px;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: flex-end;
+
+}
+
+/* .carousel_text_container{
+    display: flex;
+    flex-direction: row;
+} */
+
+
+.d-block {
+    /* IMAGENES DEL CAROUSEL */
+    height: 400px;
+    width: 400px;
+}
+
+/* FIN DE CAROUSEL */
+
+
+/* PIE DE PAGINA */
+footer {
+    text-align: center;
+    background-color: rgb(168, 175, 180);
+    width: 100vw;
+    height: 50px;
+    margin-top: 75px;
+    padding: 5px;
+}
+
+footer ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    list-style: none;
+    margin: 3.5px;
+}
+
+a {
+    color: rgb(17, 70, 119);
+    text-decoration: none;
+}
+
+/* FIN PIE DE PAGINA */
+
+/* FORMULARIO */
+fieldset {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 300px;
+}
+
+input,
+select {
+    margin: 5px;
+}
+
+#formulario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+
+/* FIN DE FORMULARIO */
+
+
+/* RESPONSIVIDAD */
+@media screen and (max-width:768px) {
+
+    .container_section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10vh;
+    }
+
+    .container_section2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10vh;
+    }
+
+
+/* ALIADOS Y VILLANOS */
+    .character_container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        height: auto;
+        margin: auto;
+    }
+
+    .character_container2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        height: auto;
+        margin: auto;
+    }
+
+    .story{
+        height: auto;
+        width: 80vw;
+    }
+
+/* FIN ALIADOS Y VILLANOS */
+
+    .carousel_container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        width: auto;
+        margin: auto;
+
+    }
+
+    .d-block {
+        /* IMAGENES DEL CAROUSEL */
+        height: 400px;
+        width: 400px;
+        margin: 20px;
+    }
+
+/* PIE DE PAGINA */
+    footer ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        list-style: none;
+        margin: 3.5px;
+    }
+/* FIN PIE DE PAGINA */
+
+}
