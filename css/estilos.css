@@ -2,6 +2,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 /* FIN DE RESET DE MARGENES */
@@ -78,6 +79,7 @@ h3 {
 .character_container {
     display: grid;
     width: 100vw;
+    max-width: 100%;
     margin-bottom: 100vh;
     height: 300px;
     grid-template-areas:
@@ -175,7 +177,7 @@ footer {
     text-align: center;
     background-color: rgb(168, 175, 180);
     width: 100vw;
-    height: 50px;
+    max-width: 100%;
     margin-top: 75px;
     padding: 5px;
 }
